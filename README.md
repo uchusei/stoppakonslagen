@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/uchusei/stoppakonslagen/blob/bef0053ef6656d340508a31c36d8b44a1053743c/content/stoppakonslagen.png" alt="Stoppa könslagen logo">
+  <img src="https://github.com/uchusei/stoppakonslagen/blob/da0bbb9160d71255effdff04685a38c2c0f7807b/content/stoppakonslagen-small-header.png" alt="Stoppa könslagen logo">
 </p>
 
 <p align="center">
