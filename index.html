@@ -903,7 +903,7 @@ jamal.el-haj@­riksdagen.se`;
         copyEmailsBtn.addEventListener('click', function(e) {
             navigator.clipboard.writeText(emailAddresses)
                 .then(() => {
-                    copyEmailsBtn.innerText = 'Mejladresser kopierade till urklipp';
+                    copyEmailsBtn.innerText = 'Kopierat till urklipp';
                     copyEmailsBtn.classList.add('fade-out-in');
                     setTimeout(() => {
                         copyEmailsBtn.innerText = 'Kopiera till urklipp';
