@@ -2909,11 +2909,13 @@ body.dark-theme .btn-link-underline-hover {
 .swiper-wrapper {
 	display: flex;
 	overflow-x: hidden !important;
+	max-width: 100vw;
+	width: auto !important;
 }
 
 .swiper-slide,
 .portfolio-item {
-	width: 100%
+	max-width: 100%;
 }
 
 .portfolio-item-img {
