@@ -1548,44 +1548,14 @@ jamal.el-haj@­riksdagen.se`;
        
            setTheme(currentTheme);
        
-           themeBtn.addEventListener("click", function() {
+           themeBtn.addEventListener("click", function(e) {
+             e.preventDefault(); 
              currentTheme = document.body.classList.contains("dark-theme") ? "light" : "dark";
              setTheme(currentTheme);
            });
          });
        </script>
-<script>
-   document.addEventListener("DOMContentLoaded", function() {
-     const themeBtn = document.querySelector(".mode-btn");
-     const themeBtnLightIcon = document.querySelector(".mode-btn > .light-mode");
-     const themeBtnDarkIcon = document.querySelector(".mode-btn > .dark-mode");
-     let currentTheme = localStorage.getItem("theme") || "dark"; 
- 
-     function setTheme(theme) {
-       if (theme === "dark") {
-         document.body.classList.add("dark-theme");
-         document.body.classList.remove("light-theme");
-         themeBtnDarkIcon.classList.add("is-active");
-         themeBtnLightIcon.classList.remove("is-active");
-       } else {
-         document.body.classList.add("light-theme");
-         document.body.classList.remove("dark-theme");
-         themeBtnDarkIcon.classList.remove("is-active");
-         themeBtnLightIcon.classList.add("is-active");
-       }
-       localStorage.setItem("theme", theme);
-     }
- 
-     setTheme(currentTheme);
- 
-     themeBtn.addEventListener("click", function() {
-       currentTheme = document.body.classList.contains("dark-theme") ? "light" : "dark";
-       setTheme(currentTheme);
-     });
-   });
- </script>
-        
-
+       
       <script src="https://stoppakonslagen.se/content/swiper-bundle.min.js"></script>
 
       <script>
