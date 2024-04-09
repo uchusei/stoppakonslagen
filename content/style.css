@@ -3275,7 +3275,8 @@ body.dark-theme .btn-link-underline-hover {
 
 .footer-copyright {
 	display: block;
-	position: absolute
+	position: absolute;
+	margin-top: 54px
 }
 
 .footer-sm {
@@ -3861,7 +3862,7 @@ body.dark-theme .btn-link-underline-hover {
 	}
 
 	.footer-copyright {
-		margin-top: 56px;
+		margin-top: 34px!important;
 		position: static
 	}
 
