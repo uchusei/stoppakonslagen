@@ -2907,7 +2907,8 @@ body.dark-theme .btn-link-underline-hover {
 }
 
 .swiper-wrapper {
-	display: flex
+	display: flex;
+	overflow-x: hidden !important;
 }
 
 .swiper-slide,
