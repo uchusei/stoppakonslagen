@@ -11,6 +11,6 @@
 
 <h1 align="center">Stoppa könslagen</h1>
 
-Den 17 april planerar regeringen att rösta om en ny könstillhörighetslag. Trots omfattande kritik och lågt stöd ser det ut som att regeringen kommer att godkänna den.
+Den 17 april planerar riksdagen att rösta om en ny könstillhörighetslag. Trots omfattande kritik och lågt stöd ser det ut som att regeringen kommer att godkänna den.
 Du har makt att påverka deras beslut.
 </div>
