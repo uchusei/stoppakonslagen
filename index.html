@@ -544,7 +544,6 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    var serviceItem = document.getElementById('service-item-1');
     var copyEmailsBtn = document.getElementById('copyEmails');
     var emailAddresses = `sofia.amloh@riksdagen.se
 johan.andersson@riksdagen.se
@@ -899,8 +898,9 @@ anna.starbrink@riksdagen.se
 elsa.widding@riksdagen.se
 jamal.el-haj@­riksdagen.se`;
 
-    if (copyEmailsBtn) {
+if (copyEmailsBtn) {
         copyEmailsBtn.addEventListener('click', function(e) {
+            e.preventDefault(); // Förhindra standardbeteende för knappklick
             navigator.clipboard.writeText(emailAddresses)
                 .then(() => {
                     copyEmailsBtn.innerText = 'Kopierat till urklipp';
@@ -916,19 +916,19 @@ jamal.el-haj@­riksdagen.se`;
         });
     }
 
-    if (serviceItem) {
-        serviceItem.addEventListener('click', function(e) {
-            e.preventDefault();
-            var target = e.target;
-            if (target.id === 'downloadPdf') {
-                window.open('https://stoppakonslagen.se/content/mejladresser.pdf', '_blank');
-            } else if (target.id === 'downloadTxt') {
-                window.open('https://stoppakonslagen.se/content/mejladresser.txt', '_blank');
-            } else {
-                console.log('Ett annat område inom service-item-1 klickades på.');
-            }
-        });
-    }
+    document.addEventListener('click', function(e) {
+        var target = e.target;
+        // Kontrollera om det klickade elementet har ett av de specifika ID:na
+        if (target.id === 'downloadPdf') {
+            window.open('https://stoppakonslagen.se/content/mejladresser.pdf', '_blank');
+        } else if (target.id === 'downloadTxt') {
+            window.open('https://stoppakonslagen.se/content/mejladresser.txt', '_blank');
+        } else if (target.id === 'petitionLink') {
+            window.open('https://chng.it/dfNQNLsqKq', '_blank');
+        } else if (target.id === 'downloadPetitionPdf') {
+            window.open('https://stoppakonslagen.se/content/Nationellt-upprop-Stoppa-konslagen-2024-04-11-v1.pdf', '_blank');
+        }
+    });
 });
 </script>
 
@@ -1026,36 +1026,54 @@ jamal.el-haj@­riksdagen.se`;
 </div>
 </a>
 
-<a data-tf-popup="NoaIbRYD" id="w-node-aebc9094-5c64-9f59-276c-a1c5eb609eb5-daae56a8" href="https://chng.it/dfNQNLsqKq" target="_blank" class="service-item service-row-1 w-inline-block" style="opacity: 1; transform: translate(0px, 0%);" data-tf-loaded="true">
-                   <img src="https://stoppakonslagen.se/content/namninsamling.svg" loading="lazy" alt="Namninsamling" class="service-item-img" style="opacity: 0.5;">
-                   <div class="padding-bottom padding-40"></div>
-                   <div class="f-color-grey">
-                      <div class="f-18">Gör din röst hörd</div>
-                   </div>
-                   <div class="padding-bottom padding-4"></div>
-                   <div class="f-roc-grotesk">
-                      <p class="f-28">Skriv under på namnlistan</p>
-                   </div>
-                   <div class="padding-bottom padding-16"></div>
-                   <p class="f-18">Det nya förslaget på könsbyteslag är dåligt underbyggt och saknar konsekvensanalys. Om lagen går igenom kommer det att medföra stora risker för kvinnor, barn och transpersoner. Trots detta vill Sveriges politiker driva igenom lagen. Därför startar vi nu detta upprop där DU kan göra din röst hörd! #STOPPAKÖNSLAGEN</p>
-                   <div class="padding-bottom padding-32"></div>
-                   <div class="btn-link">
-                      <div class="btn-link-text-wrapper">
-                         <div class="btn-link-text">Till namnlistan</div>
-                         <div class="btn-link-underline">
-                            <div class="btn-link-underline-hover" style="width: 0%; height: 1px;"></div>
-                            <div class="btn-link-underline-none"></div>
-                         </div>
-                      </div>
-                      <div class="btn-link-arrow" style="transform: translate3d(0em, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                         <div class="w-embed">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" viewBox="0 0 14 13">
-                               <path d="m6.836.816-.547.52c-.137.137-.137.355 0 .465l4.238 4.238H1.203a.332.332 0 0 0-.328.328v.766c0 .191.137.328.328.328h9.324L6.29 11.727c-.137.109-.137.328 0 .464l.547.52c.11.137.328.137.465 0l5.715-5.715a.315.315 0 0 0 0-.465L7.3.816c-.137-.136-.356-.136-.465 0Z"></path>
-                            </svg>
-                         </div>
-                      </div>
-                   </div>
-                </a>
+<a data-tf-popup="NoaIbRYD" id="w-node-aebc9094-5c64-9f59-276c-a1c5eb609eb5-daae56a8" href="#" target="_blank" class="service-item service-row-1 w-inline-block" style="opacity: 1; transform: translate(0px, 0%);" data-tf-loaded="true">
+   <img src="https://stoppakonslagen.se/content/namninsamling.svg" loading="lazy" alt="Namninsamling" class="service-item-img" style="opacity: 0.5;">
+   <div class="padding-bottom padding-40"></div>
+   <div class="f-color-grey">
+       <div class="f-18">Gör din röst hörd</div>
+   </div>
+   <div class="padding-bottom padding-4"></div>
+   <div class="f-roc-grotesk">
+       <p class="f-28">Skriv under på namnlistan</p>
+   </div>
+   <div class="padding-bottom padding-16"></div>
+   <p class="f-18">Det nya förslaget på könsbyteslag är dåligt underbyggt och saknar konsekvensanalys. Om lagen går igenom kommer det att medföra stora risker för kvinnor, barn och transpersoner. Trots detta vill Sveriges politiker driva igenom lagen. Därför startar vi nu detta upprop där DU kan göra din röst hörd! #STOPPAKÖNSLAGEN</p>
+   <div class="padding-bottom padding-32"></div>
+   <div class="btn-link">
+       <div class="btn-link-text-wrapper">
+           <div class="btn-link-text" id="petitionLink">Till namnlistan</div>
+           <div class="btn-link-underline">
+               <div class="btn-link-underline-hover" style="width: 0%; height: 1px;"></div>
+               <div class="btn-link-underline-none"></div>
+           </div>
+       </div>
+       <div class="btn-link-arrow" style="transform: translate3d(0em, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+           <div class="w-embed">
+               <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" viewBox="0 0 14 13">
+                  <path d="m6.836.816-.547.52c-.137.137-.137.355 0 .465l4.238 4.238H1.203a.332.332 0 0 0-.328.328v.766c0 .191.137.328.328.328h9.324L6.29 11.727c-.137.109-.137.328 0 .464l.547.52c.11.137.328.137.465 0l5.715-5.715a.315.315 0 0 0 0-.465L7.3.816c-.137-.136-.356-.136-.465 0Z"></path>
+               </svg>
+           </div>
+       </div>
+   </div>
+   <div class="padding-bottom padding-32"></div>
+   <div class="btn-link">
+       <div class="btn-link-text-wrapper">
+           <div class="btn-link-text" id="downloadPetitionPdf">Ladda ner uppropet här (PDF)</div>
+           <div class="btn-link-underline">
+               <div class="btn-link-underline-hover" style="width: 0%; height: 1px;"></div>
+               <div class="btn-link-underline-none"></div>
+           </div>
+       </div>
+       <div class="btn-link-arrow" style="transform: translate3d(0em, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+           <div class="w-embed">
+               <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" viewBox="0 0 14 13">
+                  <path d="m6.836.816-.547.52c-.137.137-.137.355 0 .465l4.238 4.238H1.203a.332.332 0 0 0-.328.328v.766c0 .191.137.328.328.328h9.324L6.29 11.727c-.137.109-.137.328 0 .464l.547.52c.11.137.328.137.465 0l5.715-5.715a.315.315 0 0 0 0-.465L7.3.816c-.137-.136-.356-.136-.465 0Z"></path>
+               </svg>
+           </div>
+       </div>
+   </div>
+</a>
+
              </div>
                         </div>
                      </div>
