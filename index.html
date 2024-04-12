@@ -900,7 +900,7 @@ jamal.el-haj@­riksdagen.se`;
 
 if (copyEmailsBtn) {
         copyEmailsBtn.addEventListener('click', function(e) {
-            e.preventDefault(); // Förhindra standardbeteende för knappklick
+            e.preventDefault(); 
             navigator.clipboard.writeText(emailAddresses)
                 .then(() => {
                     copyEmailsBtn.innerText = 'Kopierat till urklipp';
@@ -918,7 +918,6 @@ if (copyEmailsBtn) {
 
     document.addEventListener('click', function(e) {
         var target = e.target;
-        // Kontrollera om det klickade elementet har ett av de specifika ID:na
         if (target.id === 'downloadPdf') {
             window.open('https://stoppakonslagen.se/content/mejladresser.pdf', '_blank');
         } else if (target.id === 'downloadTxt') {
