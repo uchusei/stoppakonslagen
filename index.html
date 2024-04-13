@@ -545,358 +545,180 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     var copyEmailsBtn = document.getElementById('copyEmails');
-    var emailAddresses = `sofia.amloh@riksdagen.se
-johan.andersson@riksdagen.se
-magdalena.andersson@riksdagen.se
-sanna.backeskog@riksdagen.se
-denis.begic@riksdagen.se
-aida.birinxhiku@riksdagen.se
-patrik.bjorck@riksdagen.se
-peder.bjork@riksdagen.se
-helene.bjorklund@riksdagen.se
-yasmine.bladelius@riksdagen.se
-johan.buser@riksdagen.se
-lena.backelin@­riksdagen.se
-gunilla.c.carlsson@riksdagen.se
-rose-marie.carlsson@riksdagen.se
-teresa.carvalho@riksdagen.se
-dzenan.cisija@riksdagen.se
-mikael.dahlqvist@riksdagen.se
-mikael.damberg@riksdagen.se
-adnan.dibrani@riksdagen.se
-ida.ekeroth.clausson@riksdagen.se
-hans.ekstrom@riksdagen.se
-tomas.eneroth@riksdagen.se
-sofie.b.eriksson@riksdagen.se
-asa.eriksson@riksdagen.se
-matilda.ernkrans@riksdagen.se
-erik.ezelius@riksdagen.se
-kenneth.g.forslund@riksdagen.se
-isak.from@riksdagen.se
-marianne.fundahn@riksdagen.se
-jytte.guteland@riksdagen.se
-monica.haider@riksdagen.se
-lena.hallengren@riksdagen.se
-johanna.haraldsson@riksdagen.se
-peter.hedberg@riksdagen.se
-caroline.helmersson.olsson@riksdagen.se
-peter.hultqvist@riksdagen.se
-per-arne.hakansson@riksdagen.se
-lars.isacsson@riksdagen.se
-lena.johansson@riksdagen.se
-morgan.johansson@riksdagen.se
-mattias.jonsson@riksdagen.se
-joakim.jarrebring@riksdagen.se
-markus.kallifatides@riksdagen.se
-ida.karkiainen@riksdagen.se
-niklas.karlsson@riksdagen.se
-asa.karlsson@riksdagen.se
-kadir.kasirga@riksdagen.se
-tomas.kronstahl@riksdagen.se
-serkan.kose@riksdagen.se
-lars.mejern.larsson@riksdagen.se
-malin.larsson@riksdagen.se
-zara.leghissa@riksdagen.se
-sanne.lennstrom@riksdagen.se
-kristoffer.lindberg@riksdagen.se
-eva.lindh@riksdagen.se
-fredrik.lundh.sammeli@riksdagen.se
-patrik.lundqvist@riksdagen.se
-petter.loberg@riksdagen.se
-johan.lofstrand@riksdagen.se
-adrian.magnusson@riksdagen.se
-magnus.manhammar@riksdagen.se
-azra.muranovic@riksdagen.se
-ola.moller@riksdagen.se
-laila.naraghi@riksdagen.se
-jennie.nilsson@riksdagen.se
-ingela.nylund.watz@riksdagen.se
-leif.nysmed@riksdagen.se
-fredrik.olovsson@riksdagen.se
-mattias.ottosson@riksdagen.se
-helen.pettersson@riksdagen.se
-ewa.pihl.krabbe@riksdagen.se
-lawen.redar@riksdagen.se
-jessica.roden@riksdagen.se
-azadeh.rojhan@riksdagen.se
-mirja.raiha@riksdagen.se
-joakim.sandell@riksdagen.se
-markus.selin@riksdagen.se
-ardalan.shekarabi@riksdagen.se
-niklas.sigvardsson@riksdagen.se
-inga-lill.sjoblom@riksdagen.se
-linus.skold@riksdagen.se
-sofia.skonnbrink@riksdagen.se
-annika.strandhall@riksdagen.se
-anna-belle.stromberg@riksdagen.se
-karin.sundin@riksdagen.se
-gunilla.svantorp@riksdagen.se
-jonathan.svensson@riksdagen.se
-anna-caren.satherberg@riksdagen.se
-mathias.tegner@riksdagen.se
-olle.thorell@riksdagen.se
-louise.thunstrom@riksdagen.se
-daniel.vencu.velasquez.castro@riksdagen.se
-mattias.vepsa@riksdagen.se
-anna.vikstrom@riksdagen.se
-mariya.voyvodova@­riksdagen.se
-alexandra.volker@riksdagen.se
-anna.wallentheim@riksdagen.se
-marcus.wennerstrom@riksdagen.se
-hanna.westeren@riksdagen.se
-asa.westlund@riksdagen.se
-linnea.wickman@riksdagen.se
-bjorn.wiechel@­riksdagen.se
-mats.wiking@riksdagen.se
-anders.ygeman@riksdagen.se
-carina.odebrink@riksdagen.se
-paula.orn@­riksdagen.se
-anders.alftberg@riksdagen.se
-pontus.andersson.garpvall@riksdagen.se
-jonas.p.andersson@riksdagen.se
-lars.andersson@riksdagen.se
-tobias.andersson@riksdagen.se
-clara.aranda@riksdagen.se
-mats.arkhem@riksdagen.se
-ludvig.aspling@riksdagen.se
-angelika.bengtsson@riksdagen.se
-sara-lena.bjalko@­riksdagen.se
-unni.bjornerfors@­riksdagen.se
-carita.boulwen@riksdagen.se
-bo.broman@riksdagen.se
-mattias.backstrom.johansson@riksdagen.se
-alexander.christiansson@riksdagen.se
-dennis.dioukarev@riksdagen.se
-staffan.eklof@riksdagen.se
-aron.emilsson@riksdagen.se
-matheus.enholm@riksdagen.se
-mattias.eriksson.falk@riksdagen.se
-yasmine.eriksson@riksdagen.se
-mikael.eskilandersson@riksdagen.se
-rashid.farivar@riksdagen.se
-runar.filper@riksdagen.se
-josef.fransson@riksdagen.se
-ann-christine.utterstedt@riksdagen.se
-nima.gholam.ali.pour@riksdagen.se
-rasmus.giertz@riksdagen.se
-sara.gille@riksdagen.se
-jorgen.grubb@riksdagen.se
-goran.hargestam@­riksdagen.se
-anna-lena.hedberg@­riksdagen.se
-roger.hedlund@riksdagen.se
-erik.hellsborn@riksdagen.se
-richard.jomshof@riksdagen.se
-patrik.jonsson@riksdagen.se
-mattias.karlsson@riksdagen.se
-martin.kinnunen@riksdagen.se
-julia.kronlid@riksdagen.se
-fredrik.lindahl@riksdagen.se
-linda.lindberg@riksdagen.se
-ulf.lindholm@riksdagen.se
-angelica.lundberg@riksdagen.se
-david.lang@riksdagen.se
-adam.marttinen@riksdagen.se
-thomas.morell@riksdagen.se
-katja.nyberg@riksdagen.se
-mona.olin@riksdagen.se
-eric.palmqvist@riksdagen.se
-david.perez@riksdagen.se
-daniel.persson@riksdagen.se
-magnus.persson@riksdagen.se
-charlotte.quensel@riksdagen.se
-patrick.reslow@riksdagen.se
-michael.rubbestad@riksdagen.se
-oscar.sjostedt@riksdagen.se
-jessica.stegrud@riksdagen.se
-robert.stenkvist@riksdagen.se
-carina.stahl@riksdagen.se
-jimmy.stahl@riksdagen.se
-johnny.svedin@riksdagen.se
-bjorn.soder@riksdagen.se
-per.soderlund@riksdagen.se
-victoria.tiblom@riksdagen.se
-bjorn.tidland@riksdagen.se
-beatrice.timgren@riksdagen.se
-henrik.vinge@riksdagen.se
-martin.westmont@riksdagen.se
-eric.westroth@riksdagen.se
-markus.wiechel@riksdagen.se
-lars.wistedt@riksdagen.se
-leonid.yurkovskiy@riksdagen.se
-jimmie.akesson@riksdagen.se
-fredrik.ahlstedt@riksdagen.se
-emma.ahlstrom.koster@riksdagen.se
-ann-sofie.alm@riksdagen.se
-alexandra.anstrell@riksdagen.se
-kristina.axen.olin@riksdagen.se
-lars.beckman@riksdagen.se
-sten.bergheden@riksdagen.se
-jorgen.berglund@riksdagen.se
-helena.bouveng@riksdagen.se
-camilla.brunsberg@riksdagen.se
-crister.carlsson@riksdagen.se
-margareta.cederfelt@riksdagen.se
-mikael.damsgaard@riksdagen.se
-ida.drougge@riksdagen.se
-lars.engsund@riksdagen.se
-karin.enstrom@riksdagen.se
-jan.ericson@riksdagen.se
-mats.green@riksdagen.se
-gustaf.gothberg@riksdagen.se
-ann-charlotte.hammar.johnsson@riksdagen.se
-ulrika.heindorff@riksdagen.se
-johanna.hornberger@riksdagen.se
-johan.hultberg@riksdagen.se
-marie-louise.hanel.sandstrom@riksdagen.se
-malin.hoglund@riksdagen.se
-kjell.jansson@riksdagen.se
-lars.e.johnsson@riksdagen.se
-david.josefsson@riksdagen.se
-ellen.juntti@riksdagen.se
-arin.karapet@riksdagen.se
-mattias.j.karlsson@riksdagen.se
-fredrik.karrholm@riksdagen.se
-ann-sofie.lifvenhage@riksdagen.se
-marlene.lund.kopparklint@riksdagen.se
-eleonore.lundkvist@­riksdagen.se
-josefin.malmqvist@riksdagen.se
-noria.manouchi@riksdagen.se
-louise.meijer@riksdagen.se
-marie.nicholson@riksdagen.se
-ulrik.nilsson@riksdagen.se
-carl.nordblom@riksdagen.se
-charlotte.nordstrom@riksdagen.se
-susanne.nordstrom@riksdagen.se
-peter.ollen@riksdagen.se
-stefan.olsson@riksdagen.se
-erik.ottoson@riksdagen.se
-lars.puss@riksdagen.se
-saila.quicklund@riksdagen.se
-thomas.ragnarsson@riksdagen.se
-johanna.rantsi@riksdagen.se
-magnus.resare@riksdagen.se
-adam.reuterskiold@riksdagen.se
-edward.riedl@riksdagen.se
-jessica.rosencrantz@riksdagen.se
-oliver.rosengren@riksdagen.se
-anna.af.sillen@riksdagen.se
-jesper.skalberg.karlsson@riksdagen.se
-maria.stockhaus@riksdagen.se
-helena.storckenfeldt@riksdagen.se
-oskar.svard@riksdagen.se
-magdalena.thuresson@riksdagen.se
-katarina.tolgfors@riksdagen.se
-anna.vedin@­riksdagen.se
-hans.wallmark@riksdagen.se
-john.e.weinerhall@riksdagen.se
-jennie.wernang@riksdagen.se
-john.widegren@riksdagen.se
-viktor.warnick@riksdagen.se
-boriana.aberg@riksdagen.se
-andrea.andersson-tay@riksdagen.se
-nadja.awad@riksdagen.se
-nooshi.dadgostar@riksdagen.se
-lorena.delgado@riksdagen.se
-kajsa.fredholm@riksdagen.se
-ida.gabrielsson@riksdagen.se
-samuel.gonzalez.westling@riksdagen.se
-hanna.gunnarsson@riksdagen.se
-tony.haddou@riksdagen.se
-momodou-malcolm.jallow@riksdagen.se
-lotta.johnsson.fornarve@riksdagen.se
-maj.karlsson@riksdagen.se
-birger.lahti@riksdagen.se
-andreas.lennkvist.manriquez@­riksdagen.se
-isabell.mixter@riksdagen.se
-gudrun.nordborg@riksdagen.se
-daniel.riazat@riksdagen.se
-karin.ragsjo@riksdagen.se
-linda.snecker@riksdagen.se
-hakan.svenneling@riksdagen.se
-ilona.waldau@riksdagen.se
-vasiliki.tsouplaki@riksdagen.se
-ciczie.weidby@riksdagen.se
-jessica.wetterling@riksdagen.se
-alireza.akhondi@riksdagen.se
-christofer.bergenblock@riksdagen.se
-malin.bjork@riksdagen.se
-daniel.backstrom@riksdagen.se
-jonny.cato@riksdagen.se
-muharrem.demirok@riksdagen.se
-catarina.deremar@riksdagen.se
-ulrika.heie@riksdagen.se
-martina.johansson@riksdagen.se
-anders.w.jonsson@riksdagen.se
-anders.karlsson@riksdagen.se
-mikael.larsson@riksdagen.se
-stina.larsson@riksdagen.se
-anna.lasses@riksdagen.se
-ulrika.liljeberg@riksdagen.se
-helena.lindahl@riksdagen.se
-kerstin.lundgren@riksdagen.se
-rickard.nordin@riksdagen.se
-emelie.nyman@­riksdagen.se
-anne-li.sjolund@riksdagen.se
-mona.smedman@­riksdagen.se
-elisabeth.thand.ringqvist@riksdagen.se
-helena.vilhelmsson@riksdagen.se
-anders.adahl@riksdagen.se
-martin.adahl@riksdagen.se
-lili.andre@riksdagen.se
-yusuf.aydin@riksdagen.se
-mathias.bengtsson@riksdagen.se
-magnus.berntsson@riksdagen.se
-camilla.brodin@riksdagen.se
-gudrun.brunegard@riksdagen.se
-christian.carlsson@riksdagen.se
-hans.eklind@riksdagen.se
-torsten.elofsson@riksdagen.se
-cecilia.engstrom@riksdagen.se
-dan.hovskar@riksdagen.se
-magnus.jacobsson@riksdagen.se
-ingemar.kihlstrom@riksdagen.se
-magnus.oscarsson@riksdagen.se
-mikael.oscarsson@riksdagen.se
-kjell-arne.ottosson@riksdagen.se
-camilla.rinaldo.miller@riksdagen.se
-larry.soder@riksdagen.se
-roland.utbult@riksdagen.se
-leila.ali.elmi@riksdagen.se
-janine.alm.ericson@riksdagen.se
-emma.berginger@riksdagen.se
-mats.berglund@­riksdagen.se
-camilla.hansen@riksdagen.se
-daniel.hellden@riksdagen.se 
-annika.hirvonen@riksdagen.se
-linus.lakso@riksdagen.se
-rebecka.le.moine@riksdagen.se
-amanda.lind@riksdagen.se
-rasmus.ling@riksdagen.se
-katarina.luhr@riksdagen.se
-emma.nohren@riksdagen.se
-jan.riise@riksdagen.se
-jacob.risberg@riksdagen.se
-marta.stenevi@riksdagen.se
-elin.soderberg@riksdagen.se
-ulrika.westerlund@riksdagen.se
-gulan.avci@riksdagen.se
-malin.danielsson@riksdagen.se
-louise.eklund@riksdagen.se
-joar.forssell@riksdagen.se
-helena.gellerman@riksdagen.se
-robert.hannah@riksdagen.se
-patrik.karlson@­riksdagen.se
-fredrik.malm@riksdagen.se
-martin.melin@­riksdagen.se
-camilla.martensen@riksdagen.se
-elin.nilsson@riksdagen.se
-lina.nordquist@riksdagen.se
-jakob.olofsgard@riksdagen.se
-mauricio.rojas@riksdagen.se
-cecilia.ronn@riksdagen.se
-anna.starbrink@riksdagen.se
-elsa.widding@riksdagen.se
-jamal.el-haj@­riksdagen.se`;
+    var emailAddresses = `sofia.amloh@riksdagen.se, johan.andersson@riksdagen.se,
+magdalena.andersson@riksdagen.se, sanna.backeskog@riksdagen.se,
+denis.begic@riksdagen.se, aida.birinxhiku@riksdagen.se,
+patrik.bjorck@riksdagen.se, peder.bjork@riksdagen.se,
+helene.bjorklund@riksdagen.se, yasmine.bladelius@riksdagen.se,
+johan.buser@riksdagen.se, lena.backelin@­riksdagen.se,
+gunilla.c.carlsson@riksdagen.se, rose-marie.carlsson@riksdagen.se,
+teresa.carvalho@riksdagen.se, dzenan.cisija@riksdagen.se,
+mikael.dahlqvist@riksdagen.se, mikael.damberg@riksdagen.se,
+adnan.dibrani@riksdagen.se, ida.ekeroth.clausson@riksdagen.se,
+hans.ekstrom@riksdagen.se, tomas.eneroth@riksdagen.se,
+sofie.b.eriksson@riksdagen.se, asa.eriksson@riksdagen.se,
+matilda.ernkrans@riksdagen.se, erik.ezelius@riksdagen.se,
+kenneth.g.forslund@riksdagen.se, isak.from@riksdagen.se,
+marianne.fundahn@riksdagen.se, jytte.guteland@riksdagen.se,
+monica.haider@riksdagen.se, lena.hallengren@riksdagen.se,
+johanna.haraldsson@riksdagen.se, peter.hedberg@riksdagen.se,
+caroline.helmersson.olsson@riksdagen.se, peter.hultqvist@riksdagen.se,
+per-arne.hakansson@riksdagen.se, lars.isacsson@riksdagen.se,
+lena.johansson@riksdagen.se, morgan.johansson@riksdagen.se,
+mattias.jonsson@riksdagen.se, joakim.jarrebring@riksdagen.se,
+markus.kallifatides@riksdagen.se, ida.karkiainen@riksdagen.se,
+niklas.karlsson@riksdagen.se, asa.karlsson@riksdagen.se,
+kadir.kasirga@riksdagen.se, tomas.kronstahl@riksdagen.se,
+serkan.kose@riksdagen.se, lars.mejern.larsson@riksdagen.se,
+malin.larsson@riksdagen.se, zara.leghissa@riksdagen.se,
+sanne.lennstrom@riksdagen.se, kristoffer.lindberg@riksdagen.se,
+eva.lindh@riksdagen.se, fredrik.lundh.sammeli@riksdagen.se,
+patrik.lundqvist@riksdagen.se, petter.loberg@riksdagen.se,
+johan.lofstrand@riksdagen.se, adrian.magnusson@riksdagen.se,
+magnus.manhammar@riksdagen.se, azra.muranovic@riksdagen.se,
+ola.moller@riksdagen.se, laila.naraghi@riksdagen.se,
+jennie.nilsson@riksdagen.se, ingela.nylund.watz@riksdagen.se,
+leif.nysmed@riksdagen.se, fredrik.olovsson@riksdagen.se,
+mattias.ottosson@riksdagen.se, helen.pettersson@riksdagen.se,
+ewa.pihl.krabbe@riksdagen.se, lawen.redar@riksdagen.se,
+jessica.roden@riksdagen.se, azadeh.rojhan@riksdagen.se,
+mirja.raiha@riksdagen.se, joakim.sandell@riksdagen.se,
+markus.selin@riksdagen.se, ardalan.shekarabi@riksdagen.se,
+niklas.sigvardsson@riksdagen.se, inga-lill.sjoblom@riksdagen.se,
+linus.skold@riksdagen.se, sofia.skonnbrink@riksdagen.se,
+annika.strandhall@riksdagen.se, anna-belle.stromberg@riksdagen.se,
+karin.sundin@riksdagen.se, gunilla.svantorp@riksdagen.se,
+jonathan.svensson@riksdagen.se, anna-caren.satherberg@riksdagen.se,
+mathias.tegner@riksdagen.se, olle.thorell@riksdagen.se,
+louise.thunstrom@riksdagen.se, daniel.vencu.velasquez.castro@riksdagen.se,
+mattias.vepsa@riksdagen.se, anna.vikstrom@riksdagen.se,
+mariya.voyvodova@­riksdagen.se, alexandra.volker@riksdagen.se,
+anna.wallentheim@riksdagen.se, marcus.wennerstrom@riksdagen.se,
+hanna.westeren@riksdagen.se, asa.westlund@riksdagen.se,
+linnea.wickman@riksdagen.se, bjorn.wiechel@­riksdagen.se,
+mats.wiking@riksdagen.se, anders.ygeman@riksdagen.se,
+carina.odebrink@riksdagen.se, paula.orn@­riksdagen.se,
+anders.alftberg@riksdagen.se, pontus.andersson.garpvall@riksdagen.se,
+jonas.p.andersson@riksdagen.se, lars.andersson@riksdagen.se,
+tobias.andersson@riksdagen.se, clara.aranda@riksdagen.se,
+mats.arkhem@riksdagen.se, ludvig.aspling@riksdagen.se,
+angelika.bengtsson@riksdagen.se, sara-lena.bjalko@­riksdagen.se,
+unni.bjornerfors@­riksdagen.se, carita.boulwen@riksdagen.se,
+bo.broman@riksdagen.se, mattias.backstrom.johansson@riksdagen.se,
+alexander.christiansson@riksdagen.se, dennis.dioukarev@riksdagen.se,
+staffan.eklof@riksdagen.se, aron.emilsson@riksdagen.se,
+matheus.enholm@riksdagen.se, mattias.eriksson.falk@riksdagen.se,
+yasmine.eriksson@riksdagen.se, mikael.eskilandersson@riksdagen.se,
+rashid.farivar@riksdagen.se, runar.filper@riksdagen.se,
+josef.fransson@riksdagen.se, ann-christine.utterstedt@riksdagen.se,
+nima.gholam.ali.pour@riksdagen.se, rasmus.giertz@riksdagen.se,
+sara.gille@riksdagen.se, jorgen.grubb@riksdagen.se,
+goran.hargestam@­riksdagen.se, anna-lena.hedberg@­riksdagen.se,
+roger.hedlund@riksdagen.se, erik.hellsborn@riksdagen.se,
+richard.jomshof@riksdagen.se, patrik.jonsson@riksdagen.se,
+mattias.karlsson@riksdagen.se, martin.kinnunen@riksdagen.se,
+julia.kronlid@riksdagen.se, fredrik.lindahl@riksdagen.se,
+linda.lindberg@riksdagen.se, ulf.lindholm@riksdagen.se,
+angelica.lundberg@riksdagen.se, david.lang@riksdagen.se,
+adam.marttinen@riksdagen.se, thomas.morell@riksdagen.se,
+katja.nyberg@riksdagen.se, mona.olin@riksdagen.se,
+eric.palmqvist@riksdagen.se, david.perez@riksdagen.se,
+daniel.persson@riksdagen.se, magnus.persson@riksdagen.se,
+charlotte.quensel@riksdagen.se, patrick.reslow@riksdagen.se,
+michael.rubbestad@riksdagen.se, oscar.sjostedt@riksdagen.se,
+jessica.stegrud@riksdagen.se, robert.stenkvist@riksdagen.se,
+carina.stahl@riksdagen.se, jimmy.stahl@riksdagen.se,
+johnny.svedin@riksdagen.se, bjorn.soder@riksdagen.se,
+per.soderlund@riksdagen.se, victoria.tiblom@riksdagen.se,
+bjorn.tidland@riksdagen.se, beatrice.timgren@riksdagen.se,
+henrik.vinge@riksdagen.se, martin.westmont@riksdagen.se,
+eric.westroth@riksdagen.se, markus.wiechel@riksdagen.se,
+lars.wistedt@riksdagen.se, leonid.yurkovskiy@riksdagen.se,
+jimmie.akesson@riksdagen.se, fredrik.ahlstedt@riksdagen.se,
+emma.ahlstrom.koster@riksdagen.se, ann-sofie.alm@riksdagen.se,
+alexandra.anstrell@riksdagen.se, kristina.axen.olin@riksdagen.se,
+lars.beckman@riksdagen.se, sten.bergheden@riksdagen.se,
+jorgen.berglund@riksdagen.se, helena.bouveng@riksdagen.se,
+camilla.brunsberg@riksdagen.se, crister.carlsson@riksdagen.se,
+margareta.cederfelt@riksdagen.se, mikael.damsgaard@riksdagen.se,
+ida.drougge@riksdagen.se, lars.engsund@riksdagen.se,
+karin.enstrom@riksdagen.se, jan.ericson@riksdagen.se, mats.green@riksdagen.se,
+gustaf.gothberg@riksdagen.se, ann-charlotte.hammar.johnsson@riksdagen.se,
+ulrika.heindorff@riksdagen.se, johanna.hornberger@riksdagen.se,
+johan.hultberg@riksdagen.se, marie-louise.hanel.sandstrom@riksdagen.se,
+malin.hoglund@riksdagen.se, kjell.jansson@riksdagen.se,
+lars.e.johnsson@riksdagen.se, david.josefsson@riksdagen.se,
+ellen.juntti@riksdagen.se, arin.karapet@riksdagen.se,
+mattias.j.karlsson@riksdagen.se, fredrik.karrholm@riksdagen.se,
+ann-sofie.lifvenhage@riksdagen.se, marlene.lund.kopparklint@riksdagen.se,
+eleonore.lundkvist@­riksdagen.se, josefin.malmqvist@riksdagen.se,
+noria.manouchi@riksdagen.se, louise.meijer@riksdagen.se,
+marie.nicholson@riksdagen.se, ulrik.nilsson@riksdagen.se,
+carl.nordblom@riksdagen.se, charlotte.nordstrom@riksdagen.se,
+susanne.nordstrom@riksdagen.se, peter.ollen@riksdagen.se,
+stefan.olsson@riksdagen.se, erik.ottoson@riksdagen.se, lars.puss@riksdagen.se,
+saila.quicklund@riksdagen.se, thomas.ragnarsson@riksdagen.se,
+johanna.rantsi@riksdagen.se, magnus.resare@riksdagen.se,
+adam.reuterskiold@riksdagen.se, edward.riedl@riksdagen.se,
+jessica.rosencrantz@riksdagen.se, oliver.rosengren@riksdagen.se,
+anna.af.sillen@riksdagen.se, jesper.skalberg.karlsson@riksdagen.se,
+maria.stockhaus@riksdagen.se, helena.storckenfeldt@riksdagen.se,
+oskar.svard@riksdagen.se, magdalena.thuresson@riksdagen.se,
+katarina.tolgfors@riksdagen.se, anna.vedin@­riksdagen.se,
+hans.wallmark@riksdagen.se, john.e.weinerhall@riksdagen.se,
+jennie.wernang@riksdagen.se, john.widegren@riksdagen.se,
+viktor.warnick@riksdagen.se, boriana.aberg@riksdagen.se,
+andrea.andersson-tay@riksdagen.se, nadja.awad@riksdagen.se,
+nooshi.dadgostar@riksdagen.se, lorena.delgado@riksdagen.se,
+kajsa.fredholm@riksdagen.se, ida.gabrielsson@riksdagen.se,
+samuel.gonzalez.westling@riksdagen.se, hanna.gunnarsson@riksdagen.se,
+tony.haddou@riksdagen.se, momodou-malcolm.jallow@riksdagen.se,
+lotta.johnsson.fornarve@riksdagen.se, maj.karlsson@riksdagen.se,
+birger.lahti@riksdagen.se, andreas.lennkvist.manriquez@­riksdagen.se,
+isabell.mixter@riksdagen.se, gudrun.nordborg@riksdagen.se,
+daniel.riazat@riksdagen.se, karin.ragsjo@riksdagen.se,
+linda.snecker@riksdagen.se, hakan.svenneling@riksdagen.se,
+ilona.waldau@riksdagen.se, vasiliki.tsouplaki@riksdagen.se,
+ciczie.weidby@riksdagen.se, jessica.wetterling@riksdagen.se,
+alireza.akhondi@riksdagen.se, christofer.bergenblock@riksdagen.se,
+malin.bjork@riksdagen.se, daniel.backstrom@riksdagen.se,
+jonny.cato@riksdagen.se, muharrem.demirok@riksdagen.se,
+catarina.deremar@riksdagen.se, ulrika.heie@riksdagen.se,
+martina.johansson@riksdagen.se, anders.w.jonsson@riksdagen.se,
+anders.karlsson@riksdagen.se, mikael.larsson@riksdagen.se,
+stina.larsson@riksdagen.se, anna.lasses@riksdagen.se,
+ulrika.liljeberg@riksdagen.se, helena.lindahl@riksdagen.se,
+kerstin.lundgren@riksdagen.se, rickard.nordin@riksdagen.se,
+emelie.nyman@­riksdagen.se, anne-li.sjolund@riksdagen.se,
+mona.smedman@­riksdagen.se, elisabeth.thand.ringqvist@riksdagen.se,
+helena.vilhelmsson@riksdagen.se, anders.adahl@riksdagen.se,
+martin.adahl@riksdagen.se, lili.andre@riksdagen.se, yusuf.aydin@riksdagen.se,
+mathias.bengtsson@riksdagen.se, magnus.berntsson@riksdagen.se,
+camilla.brodin@riksdagen.se, gudrun.brunegard@riksdagen.se,
+christian.carlsson@riksdagen.se, hans.eklind@riksdagen.se,
+torsten.elofsson@riksdagen.se, cecilia.engstrom@riksdagen.se,
+dan.hovskar@riksdagen.se, magnus.jacobsson@riksdagen.se,
+ingemar.kihlstrom@riksdagen.se, magnus.oscarsson@riksdagen.se,
+mikael.oscarsson@riksdagen.se, kjell-arne.ottosson@riksdagen.se,
+camilla.rinaldo.miller@riksdagen.se, larry.soder@riksdagen.se,
+roland.utbult@riksdagen.se, leila.ali.elmi@riksdagen.se,
+janine.alm.ericson@riksdagen.se, emma.berginger@riksdagen.se,
+mats.berglund@­riksdagen.se, camilla.hansen@riksdagen.se,
+daniel.hellden@riksdagen.se,  annika.hirvonen@riksdagen.se,
+linus.lakso@riksdagen.se, rebecka.le.moine@riksdagen.se,
+amanda.lind@riksdagen.se, rasmus.ling@riksdagen.se,
+katarina.luhr@riksdagen.se, emma.nohren@riksdagen.se, jan.riise@riksdagen.se,
+jacob.risberg@riksdagen.se, marta.stenevi@riksdagen.se,
+elin.soderberg@riksdagen.se, ulrika.westerlund@riksdagen.se,
+gulan.avci@riksdagen.se, malin.danielsson@riksdagen.se,
+louise.eklund@riksdagen.se, joar.forssell@riksdagen.se,
+helena.gellerman@riksdagen.se, robert.hannah@riksdagen.se,
+patrik.karlson@­riksdagen.se, fredrik.malm@riksdagen.se,
+martin.melin@­riksdagen.se, camilla.martensen@riksdagen.se,
+elin.nilsson@riksdagen.se, lina.nordquist@riksdagen.se,
+jakob.olofsgard@riksdagen.se, mauricio.rojas@riksdagen.se,
+cecilia.ronn@riksdagen.se, anna.starbrink@riksdagen.se,
+elsa.widding@riksdagen.se, jamal.el-haj@­riksdagen.se`;
 
 if (copyEmailsBtn) {
         copyEmailsBtn.addEventListener('click', function(e) {
